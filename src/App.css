@@ -1,0 +1,10 @@
+:root{
+    --slack-color: #4a154b;
+    --slack-light-color: #571958;
+    --slack-dark-color: #331834;;
+  }
+
+  .app__body{
+    display: flex;
+    height: 100vh;
+  }
