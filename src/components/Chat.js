@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { db } from './Firebase'
+import { db } from '../config/Firebase';
 import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import Messages from './Messages';
 import ChatInput from './ChatInput';
-import "./Chat.css";
+import "./../styles/Chat.css";
 
 function Chat() {
-    const { roomId = 'default' } = useParams();
+    const { roomId = 'FBEL8pmjCMMwIWxRZPtn' } = useParams();
     const [roomDetails, setRoomDetails] = useState(null);
     const [roomMessages, setRoomMessages] = useState([]);
     useEffect(() => {

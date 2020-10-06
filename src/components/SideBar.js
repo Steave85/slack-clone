@@ -12,9 +12,9 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import SideBarOption from './SideBarOption';
-import { db } from './Firebase';
-import './SideBar.css';
-import { useStateValue } from './StateProvider';
+import { db } from '../config/Firebase';
+import './../styles/SideBar.css';
+import { useStateValue } from './../StateProvider';
 
 function SideBar() {
 

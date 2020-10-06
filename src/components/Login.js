@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button } from "@material-ui/core";
-import {auth, provider} from './Firebase';
-import './Login.css';
-import { useStateValue } from './StateProvider';
-import { actionTypes } from './Reducer';
+import {auth, provider} from '../config/Firebase';
+import { useStateValue } from './../StateProvider';
+import { actionTypes } from './../Reducer';
+import './../styles/Login.css';
 
 function Login() {
     const [state, dispatch] = useStateValue();
@@ -12,6 +12,7 @@ function Login() {
         auth.signInWithPopup(provider)
             .then(result =>{
                 dispatch({
+                    ...state,
                     type: actionTypes.SET_USER,
                     user: result.user
                 })
@@ -22,9 +23,9 @@ function Login() {
     return (
         <div className="login"> 
             <div className="login__container">
-                <img src={slackLogo} />
-            <h1>Sign in to Avenger's Hero Chat</h1>
-            <p>avengers.slack.com</p>
+                <img src={slackLogo} alt='slack logo'/>
+            <h1>Sign in to Slack Clone Chat</h1>
+            <p>slack-clone.slack.com</p>
             <Button onClick={signIn}>Sign In with Google</Button>
             </div>
         </div>

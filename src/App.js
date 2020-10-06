@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { useStateValue, StateConsumer } from './StateProvider';
-import Header from './Header';
-import SideBar from './SideBar';
-import Chat from './Chat';
-import Login from './Login';
-import './App.css';
+import { useStateValue } from './StateProvider';
+import Header from './components/Header';
+import SideBar from './components/SideBar';
+import Chat from './components/Chat';
+import Login from './components/Login';
+import './styles/App.css';
 
 function App() {
   const [{user}] = useStateValue();

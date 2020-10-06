@@ -1,12 +1,11 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom'
-import { db } from './Firebase';
-import './SideBarOption.css';
+import { db } from '../config/Firebase';
+import './../styles/SideBarOption.css';
 
 function SideBarOption({ Icon, title, id, addChannelOption}) {
     const history = useHistory();
     const selectChannel = ()=>{
-        console.log(addChannelOption);
         if(id){
             history.push(`/room/${id}`);
         } else{
